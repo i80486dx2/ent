@@ -1,0 +1,15 @@
+from schedule import *
+import schedule
+import time
+
+num = 0
+
+def hello():
+    num += 1
+    print("hello {}".format(num))
+
+schedule.every(1).minute.do(hello)
+
+while True:
+    schedule.run_pending()
+    time.sllep(1)

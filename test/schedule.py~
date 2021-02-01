@@ -1,0 +1,11 @@
+import schedule
+num = 0
+
+def hello():
+    num += 1
+    print("hello {}".format(num))
+
+schedule.every(3).sencond.do(hello)
+
+while True:
+    schedule.run_pending()
